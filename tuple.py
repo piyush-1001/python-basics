@@ -5,4 +5,6 @@ no_1_times = tup.count(1)
 print('Using the Count Method :', no_1_times)
 
 index_value = tup.index(1, 5)
-print('Using the Index Method :', index_value)
+print('Using the Index Method Method :', index_value)
+
+print('Hello World !')
