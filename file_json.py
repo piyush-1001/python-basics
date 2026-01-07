@@ -3,7 +3,7 @@ from xml.etree.ElementTree import indent
 
 # Serialization
 py_object = {"Name":"Piyush", "Age":20}
-py_to_json = json.dumps(py_object)
+py_to_json = json.dumps(py_object, indent=10, separators=(' ----- ', ' ===== '))
 print(py_to_json)
 print(type(py_to_json), '\n')
 
