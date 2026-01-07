@@ -5,7 +5,6 @@ print('The Original Tuple is :', tup)
 # print('Using the Count Method :', no_1_times)
 
 index_value = tup.index(1, 5)
-print('Using the Index Method Method :', index_value)
+print('Using the Index Method :', index_value)
 
 print('Bye World !')
-
