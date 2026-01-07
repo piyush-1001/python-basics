@@ -8,4 +8,3 @@ index_value = tup.index(1, 5)
 print('Using the Index Method :', index_value)
 
 print('Bye World !')
-
