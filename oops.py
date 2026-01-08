@@ -4,6 +4,7 @@
 # print('The Value of x in the Class MyClass is :', obj_1.x)
 # del obj_1
 # print(obj_1)
+from encodings.punycode import selective_find
 from os import remove
 
 
@@ -236,13 +237,65 @@ from os import remove
 # # This is How we can access the Private Variable using the Class name and the Variable NAme itself.
 # # _classname__Variable_name (single underscore -> class name -> double underscore -> Variable Name)
 
-class OuterClass:
+# class OuterClass:
+#     def __init__(self):
+#         self.name = "Outer Class Initiated"
+#     class InnerClass:
+#         def __init__(self):
+#             self.name = "Inner Class Initiated"
+#         def display(self):
+#             print('This is the Display Method inside the inner Class')
+# outer_obj = OuterClass()
+# print(outer_obj.name)
+# inner_obj = outer_obj.InnerClass()           # Accessing Inner Class from the Outside
+# inner_obj.display()
+
+# class Outer:
+#     def __init__(self):
+#         self.name = 'Piyush'
+#     class Inner:
+#         def __init__(self, outer):
+#             self.outer = outer
+#         def show(self):
+#             print(self.outer.name)
+# outer_obj = Outer()
+# inner_obj = outer_obj.Inner(outer_obj)
+# inner_obj.show()
+
+# class Car:
+#     def __init__(self, brand, model):
+#         self.brand = brand
+#         self.model = model
+#         self.engine = self.Engine()
+#     class Engine:
+#         def __init__(self):
+#             self.status = ''
+#         def start(self):
+#             self.status = 'RUNNING'
+#             print('Engine started')
+#         def stop(self):
+#             self.status = 'STOPPED'
+#             print('Engine stopped')
+#     def drive(self):
+#         if self.engine.status == 'RUNNING':
+#             print(f'{self.brand} {self.model}')
+#         else:
+#             print(f'First Start the Engine !')
+# car_obj = Car('Mahindra', 'XUV700')
+# # car_obj.drive()
+# car_obj.engine.start()
+# car_obj.drive()
+
+class Computer:
     def __init__(self):
-        self.name = "Outer Class Initiated"
-    class InnerClass:
-        def __init__(self):
-            self.name = "Inner Class Initiated"
-        def display(self):
-            print('This is the Display Method inside the inner Class')
-outer_obj = OuterClass()
-print(outer_obj.name)
+        self.cpu = self.CPU()
+        self.ram = self.RAM()
+    class CPU:
+        def process(self):
+            print("Processing CPU")
+    class RAM:
+        def store(self):
+            print("Processing RAM")
+comp = Computer()
+comp.cpu.process()
+comp.ram.store()
